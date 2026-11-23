@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-patcher"
+version = "5.3.0"
+description = "Universal Enterprise Security & Privacy Hardening Shield for Claude Desktop"
+readme = "README.md"
+authors = [
+    { name = "Claude Patcher Contributors" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "rich>=13.0.0"
+]
+keywords = [
+    "claude",
+    "claude-desktop",
+    "anthropic",
+    "privacy",
+    "telemetry",
+    "hardener",
+    "security",
+    "webrtc",
+    "anti-leak"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Utilities"
+]
+
+[project.scripts]
+clp = "claude_patcher:main"
+claude-patcher = "claude_patcher:main"
+
+[tool.setuptools]
+py-modules = ["claude_patcher"]
