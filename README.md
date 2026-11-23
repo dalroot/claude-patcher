@@ -15,14 +15,14 @@ A privacy, telemetry-blocking, and security-hardening suite for Claude Desktop o
 
 ### Linux Installation
 ```bash
-git clone https://github.com/Sh4maran/claude-patcher.git
+git clone https://github.com/dalroot/claude-patcher.git
 cd claude-patcher
 ./install.sh
 ```
 
 ### Windows Installation (PowerShell)
 ```powershell
-git clone https://github.com/Sh4maran/claude-patcher.git
+git clone https://github.com/dalroot/claude-patcher.git
 cd claude-patcher
 .\install.ps1
 ```
