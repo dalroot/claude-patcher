@@ -2,6 +2,10 @@
 
 A privacy, telemetry-blocking, and security-hardening suite for Claude Desktop on Linux and Windows.
 
+<p align="center">
+  <img src="docs/assets/clp_terminal_preview.png" alt="Claude Patcher Interactive Terminal and Evidence-Based Audit" width="800">
+</p>
+
 ## Key Capabilities
 
 - **Enterprise MDM Configuration:** Automatically configures enterprise policies (`disableEssentialTelemetry`, `disableNonessentialTelemetry`, `disableNonessentialServices`, `disableAutoUpdates`) without modifying application binaries.
