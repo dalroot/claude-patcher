@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 230" width="100%" height="230">
+  <defs>
+    <style>
+      .bg { fill: #131316; rx: 14px; }
+      .border { stroke: #27272a; stroke-width: 1.5; fill: none; rx: 14px; }
+      .logo { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; font-size: 15px; line-height: 1.25; fill: #D97757; font-weight: bold; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 800; fill: #ffffff; letter-spacing: -0.3px; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13.5px; fill: #10b981; font-weight: 600; }
+      .badge-box-green { fill: #064e3b; stroke: #059669; stroke-width: 1; rx: 6px; }
+      .badge-text-green { font-family: ui-monospace, monospace; font-size: 11px; fill: #34d399; font-weight: 700; }
+      .badge-box-blue { fill: #1e293b; stroke: #334155; stroke-width: 1; rx: 6px; }
+      .badge-text-blue { font-family: ui-monospace, monospace; font-size: 11px; fill: #38bdf8; font-weight: 700; }
+      .badge-box-purple { fill: #2e1065; stroke: #4c1d95; stroke-width: 1; rx: 6px; }
+      .badge-text-purple { font-family: ui-monospace, monospace; font-size: 11px; fill: #c084fc; font-weight: 700; }
+      .badge-desc { font-family: -apple-system, sans-serif; font-size: 12.5px; fill: #a1a1aa; }
+      .divider { stroke: #27272a; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background Panel -->
+  <rect width="850" height="230" class="bg" />
+  <rect width="850" height="230" class="border" />
+
+  <!-- Calibrated Starburst Logo (Exact #D97757) -->
+  <g transform="translate(35, 34)">
+    <text class="logo" xml:space="preserve">
+      <tspan x="0" y="14">     ██    █▄       </tspan>
+      <tspan x="0" y="29">     ▀██  ▄█▀ ▄██   </tspan>
+      <tspan x="0" y="44"> ▀██▄ ▀██ ██ ▄██▀   </tspan>
+      <tspan x="0" y="59">   ▀███████████     </tspan>
+      <tspan x="0" y="74">▄▄▄▄▄▄▀███████▄████▀</tspan>
+      <tspan x="0" y="89">▀▀▀▀▀▀▀████████▄▄▄▄▄</tspan>
+      <tspan x="0" y="104">   ▄▄██▀██████▄ ▀▀▀▀</tspan>
+      <tspan x="0" y="119">  ██▀ ▄█▀██ ██▀█▄   </tspan>
+      <tspan x="0" y="134">    ▄█▀  ██  ▀█▄ ▀  </tspan>
+      <tspan x="0" y="149">         █▀   ▀     </tspan>
+    </text>
+  </g>
+
+  <!-- Vertical Divider -->
+  <line x1="260" y1="25" x2="260" y2="205" class="divider" />
+
+  <!-- Header Details & Typography -->
+  <g transform="translate(285, 42)">
+    <text x="0" y="0" class="title">Anthropic Claude Desktop</text>
+    <text x="0" y="23" class="subtitle">🛡️ Zero-Byte Anti-Ban Shield &amp; In-Place ASAR Hardener</text>
+
+    <!-- Details Grid -->
+    <g transform="translate(0, 44)">
+      <!-- Row 1: Anti-Ban Protection -->
+      <rect x="0" y="0" width="82" height="22" class="badge-box-green" />
+      <text x="7" y="15" class="badge-text-green">ANTI-BAN</text>
+      <text x="94" y="15" class="badge-desc">Eliminates WebRTC STUN leaks, DNS prefetch &amp; hardware cookies</text>
+
+      <!-- Row 2: 8-Layer In-Place Hardening -->
+      <rect x="0" y="30" width="82" height="22" class="badge-box-blue" />
+      <text x="6" y="45" class="badge-text-blue">ASAR CORE</text>
+      <text x="94" y="45" class="badge-desc">8-layer surgical zero-byte AST patch &amp; memory firewall</text>
+
+      <!-- Row 3: Enterprise Parity & Safety -->
+      <rect x="0" y="60" width="82" height="22" class="badge-box-purple" />
+      <text x="14" y="75" class="badge-text-purple">PARITY</text>
+      <text x="94" y="75" class="badge-desc">Linux &amp; Windows dual-engine • Native MDM • 1-click clean rollback</text>
+    </g>
+  </g>
+</svg>

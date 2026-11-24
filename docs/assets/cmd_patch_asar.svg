@@ -1,0 +1,133 @@
+<svg class="rich-terminal" viewBox="0 0 994 513.5999999999999" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generated with Rich https://www.textualize.io -->
+    <style>
+
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Regular"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Regular.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Regular.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Bold"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Bold.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Bold.woff") format("woff");
+        font-style: bold;
+        font-weight: 700;
+    }
+
+    .terminal-164084729-matrix {
+        font-family: Fira Code, monospace;
+        font-size: 20px;
+        line-height: 24.4px;
+        font-variant-east-asian: full-width;
+    }
+
+    .terminal-164084729-title {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: arial;
+    }
+
+    .terminal-164084729-r1 { fill: #68a0b3;font-weight: bold }
+.terminal-164084729-r2 { fill: #c5c8c6 }
+.terminal-164084729-r3 { fill: #868887 }
+.terminal-164084729-r4 { fill: #98a84b;font-weight: bold }
+    </style>
+
+    <defs>
+    <clipPath id="terminal-164084729-clip-terminal">
+      <rect x="0" y="0" width="975.0" height="462.59999999999997" />
+    </clipPath>
+    <clipPath id="terminal-164084729-line-0">
+    <rect x="0" y="1.5" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-1">
+    <rect x="0" y="25.9" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-2">
+    <rect x="0" y="50.3" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-3">
+    <rect x="0" y="74.7" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-4">
+    <rect x="0" y="99.1" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-5">
+    <rect x="0" y="123.5" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-6">
+    <rect x="0" y="147.9" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-7">
+    <rect x="0" y="172.3" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-8">
+    <rect x="0" y="196.7" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-9">
+    <rect x="0" y="221.1" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-10">
+    <rect x="0" y="245.5" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-11">
+    <rect x="0" y="269.9" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-12">
+    <rect x="0" y="294.3" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-13">
+    <rect x="0" y="318.7" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-14">
+    <rect x="0" y="343.1" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-15">
+    <rect x="0" y="367.5" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-16">
+    <rect x="0" y="391.9" width="976" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-164084729-line-17">
+    <rect x="0" y="416.3" width="976" height="24.65"/>
+            </clipPath>
+    </defs>
+
+    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="992" height="511.6" rx="8"/><text class="terminal-164084729-title" fill="#c5c8c6" text-anchor="middle" x="496" y="27">sudo&#160;clp&#160;patch-asar&#160;—&#160;Zero-Byte&#160;ASAR&#160;Hardening</text>
+            <g transform="translate(26,22)">
+            <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
+            <circle cx="22" cy="0" r="7" fill="#febc2e"/>
+            <circle cx="44" cy="0" r="7" fill="#28c840"/>
+            </g>
+        
+    <g transform="translate(9, 41)" clip-path="url(#terminal-164084729-clip-terminal)">
+    
+    <g class="terminal-164084729-matrix">
+    <text class="terminal-164084729-r1" x="0" y="20" textLength="134.2" clip-path="url(#terminal-164084729-line-0)">⚡&#160;Applying&#160;</text><text class="terminal-164084729-r1" x="146.4" y="20" textLength="12.2" clip-path="url(#terminal-164084729-line-0)">8</text><text class="terminal-164084729-r1" x="158.6" y="20" textLength="597.8" clip-path="url(#terminal-164084729-line-0)">-Layer&#160;Surgical&#160;Zero-Byte&#160;In-Place&#160;ASAR&#160;Hardening</text><text class="terminal-164084729-r1" x="756.4" y="20" textLength="36.6" clip-path="url(#terminal-164084729-line-0)">...</text><text class="terminal-164084729-r2" x="976" y="20" textLength="12.2" clip-path="url(#terminal-164084729-line-0)">
+</text><text class="terminal-164084729-r3" x="0" y="44.4" textLength="976" clip-path="url(#terminal-164084729-line-1)">────────────────────────────────────────────────────────────────────────────────</text><text class="terminal-164084729-r2" x="976" y="44.4" textLength="12.2" clip-path="url(#terminal-164084729-line-1)">
+</text><text class="terminal-164084729-r4" x="0" y="68.8" textLength="939.4" clip-path="url(#terminal-164084729-line-2)">✔&#160;Verified&#160;stock&#160;backups:&#160;app.asar.stock.bak&#160;+&#160;ion-dist.asar.stock.bak&#160;intact</text><text class="terminal-164084729-r2" x="976" y="68.8" textLength="12.2" clip-path="url(#terminal-164084729-line-2)">
+</text><text class="terminal-164084729-r4" x="0" y="93.2" textLength="24.4" clip-path="url(#terminal-164084729-line-3)">✔&#160;</text><text class="terminal-164084729-r4" x="24.4" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">[</text><text class="terminal-164084729-r4" x="36.6" y="93.2" textLength="73.2" clip-path="url(#terminal-164084729-line-3)">Patch&#160;</text><text class="terminal-164084729-r4" x="109.8" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">1</text><text class="terminal-164084729-r4" x="122" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">/</text><text class="terminal-164084729-r4" x="134.2" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">8</text><text class="terminal-164084729-r4" x="146.4" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">]</text><text class="terminal-164084729-r4" x="158.6" y="93.2" textLength="353.8" clip-path="url(#terminal-164084729-line-3)">&#160;GrowthBook&#160;device-id&#160;header&#160;</text><text class="terminal-164084729-r4" x="512.4" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">(</text><text class="terminal-164084729-r4" x="524.6" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">)</text><text class="terminal-164084729-r4" x="536.8" y="93.2" textLength="158.6" clip-path="url(#terminal-164084729-line-3)">&#160;neutralized&#160;</text><text class="terminal-164084729-r4" x="695.4" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">(</text><text class="terminal-164084729-r4" x="707.6" y="93.2" textLength="97.6" clip-path="url(#terminal-164084729-line-3)">app.asar</text><text class="terminal-164084729-r4" x="805.2" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">)</text><text class="terminal-164084729-r2" x="976" y="93.2" textLength="12.2" clip-path="url(#terminal-164084729-line-3)">
+</text><text class="terminal-164084729-r4" x="0" y="117.6" textLength="24.4" clip-path="url(#terminal-164084729-line-4)">✔&#160;</text><text class="terminal-164084729-r4" x="24.4" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">[</text><text class="terminal-164084729-r4" x="36.6" y="117.6" textLength="73.2" clip-path="url(#terminal-164084729-line-4)">Patch&#160;</text><text class="terminal-164084729-r4" x="109.8" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">2</text><text class="terminal-164084729-r4" x="122" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">/</text><text class="terminal-164084729-r4" x="134.2" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">8</text><text class="terminal-164084729-r4" x="146.4" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">]</text><text class="terminal-164084729-r4" x="158.6" y="117.6" textLength="414.8" clip-path="url(#terminal-164084729-line-4)">&#160;EventLogging&#160;telemetry&#160;transport&#160;</text><text class="terminal-164084729-r4" x="573.4" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">(</text><text class="terminal-164084729-r4" x="585.6" y="117.6" textLength="24.4" clip-path="url(#terminal-164084729-line-4)">uN</text><text class="terminal-164084729-r4" x="610" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">)</text><text class="terminal-164084729-r4" x="622.2" y="117.6" textLength="158.6" clip-path="url(#terminal-164084729-line-4)">&#160;neutralized&#160;</text><text class="terminal-164084729-r4" x="780.8" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">(</text><text class="terminal-164084729-r4" x="793" y="117.6" textLength="97.6" clip-path="url(#terminal-164084729-line-4)">app.asar</text><text class="terminal-164084729-r4" x="890.6" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">)</text><text class="terminal-164084729-r2" x="976" y="117.6" textLength="12.2" clip-path="url(#terminal-164084729-line-4)">
+</text><text class="terminal-164084729-r4" x="0" y="142" textLength="24.4" clip-path="url(#terminal-164084729-line-5)">✔&#160;</text><text class="terminal-164084729-r4" x="24.4" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">[</text><text class="terminal-164084729-r4" x="36.6" y="142" textLength="73.2" clip-path="url(#terminal-164084729-line-5)">Patch&#160;</text><text class="terminal-164084729-r4" x="109.8" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">3</text><text class="terminal-164084729-r4" x="122" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">/</text><text class="terminal-164084729-r4" x="134.2" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">8</text><text class="terminal-164084729-r4" x="146.4" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">]</text><text class="terminal-164084729-r4" x="158.6" y="142" textLength="439.2" clip-path="url(#terminal-164084729-line-5)">&#160;Sentry&#160;crash&#160;reporter&#160;startup&#160;init&#160;</text><text class="terminal-164084729-r4" x="597.8" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">(</text><text class="terminal-164084729-r4" x="610" y="142" textLength="36.6" clip-path="url(#terminal-164084729-line-5)">Cde</text><text class="terminal-164084729-r4" x="646.6" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">)</text><text class="terminal-164084729-r4" x="658.8" y="142" textLength="122" clip-path="url(#terminal-164084729-line-5)">&#160;bypassed&#160;</text><text class="terminal-164084729-r4" x="780.8" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">(</text><text class="terminal-164084729-r4" x="793" y="142" textLength="97.6" clip-path="url(#terminal-164084729-line-5)">app.asar</text><text class="terminal-164084729-r4" x="890.6" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">)</text><text class="terminal-164084729-r2" x="976" y="142" textLength="12.2" clip-path="url(#terminal-164084729-line-5)">
+</text><text class="terminal-164084729-r4" x="0" y="166.4" textLength="24.4" clip-path="url(#terminal-164084729-line-6)">✔&#160;</text><text class="terminal-164084729-r4" x="24.4" y="166.4" textLength="12.2" clip-path="url(#terminal-164084729-line-6)">[</text><text class="terminal-164084729-r4" x="36.6" y="166.4" textLength="73.2" clip-path="url(#terminal-164084729-line-6)">Patch&#160;</text><text class="terminal-164084729-r4" x="109.8" y="166.4" textLength="12.2" clip-path="url(#terminal-164084729-line-6)">4</text><text class="terminal-164084729-r4" x="122" y="166.4" textLength="12.2" clip-path="url(#terminal-164084729-line-6)">/</text><text class="terminal-164084729-r4" x="134.2" y="166.4" textLength="12.2" clip-path="url(#terminal-164084729-line-6)">8</text><text class="terminal-164084729-r4" x="146.4" y="166.4" textLength="12.2" clip-path="url(#terminal-164084729-line-6)">]</text><text class="terminal-164084729-r4" x="158.6" y="166.4" textLength="341.6" clip-path="url(#terminal-164084729-line-6)">&#160;Sentry&#160;egress&#160;verdict&#160;gate&#160;</text><text class="terminal-164084729-r4" x="500.2" y="166.4" textLength="12.2" clip-path="url(#terminal-164084729-line-6)">(</text><text class="terminal-164084729-r4" x="512.4" y="166.4" textLength="36.6" clip-path="url(#terminal-164084729-line-6)">Ycr</text><text class="terminal-164084729-r4" x="549" y="166.4" textLength="12.2" clip-path="url(#terminal-164084729-line-6)">)</text><text class="terminal-164084729-r4" x="561.2" y="166.4" textLength="280.6" clip-path="url(#terminal-164084729-line-6)">&#160;permanently&#160;locked&#160;to&#160;</text><text class="terminal-164084729-r4" x="841.8" y="166.4" textLength="109.8" clip-path="url(#terminal-164084729-line-6)">&quot;blocked&quot;</text><text class="terminal-164084729-r2" x="976" y="166.4" textLength="12.2" clip-path="url(#terminal-164084729-line-6)">
+</text><text class="terminal-164084729-r4" x="0" y="190.8" textLength="12.2" clip-path="url(#terminal-164084729-line-7)">(</text><text class="terminal-164084729-r4" x="12.2" y="190.8" textLength="97.6" clip-path="url(#terminal-164084729-line-7)">app.asar</text><text class="terminal-164084729-r4" x="109.8" y="190.8" textLength="12.2" clip-path="url(#terminal-164084729-line-7)">)</text><text class="terminal-164084729-r2" x="976" y="190.8" textLength="12.2" clip-path="url(#terminal-164084729-line-7)">
+</text><text class="terminal-164084729-r4" x="0" y="215.2" textLength="24.4" clip-path="url(#terminal-164084729-line-8)">✔&#160;</text><text class="terminal-164084729-r4" x="24.4" y="215.2" textLength="12.2" clip-path="url(#terminal-164084729-line-8)">[</text><text class="terminal-164084729-r4" x="36.6" y="215.2" textLength="73.2" clip-path="url(#terminal-164084729-line-8)">Patch&#160;</text><text class="terminal-164084729-r4" x="109.8" y="215.2" textLength="12.2" clip-path="url(#terminal-164084729-line-8)">5</text><text class="terminal-164084729-r4" x="122" y="215.2" textLength="12.2" clip-path="url(#terminal-164084729-line-8)">/</text><text class="terminal-164084729-r4" x="134.2" y="215.2" textLength="12.2" clip-path="url(#terminal-164084729-line-8)">8</text><text class="terminal-164084729-r4" x="146.4" y="215.2" textLength="12.2" clip-path="url(#terminal-164084729-line-8)">]</text><text class="terminal-164084729-r4" x="158.6" y="215.2" textLength="597.8" clip-path="url(#terminal-164084729-line-8)">&#160;Electron&#160;in-memory&#160;regex&#160;firewall&#160;activated&#160;for&#160;</text><text class="terminal-164084729-r2" x="976" y="215.2" textLength="12.2" clip-path="url(#terminal-164084729-line-8)">
+</text><text class="terminal-164084729-r4" x="0" y="239.6" textLength="305" clip-path="url(#terminal-164084729-line-9)">datadoghq/sentry/segment&#160;</text><text class="terminal-164084729-r4" x="305" y="239.6" textLength="12.2" clip-path="url(#terminal-164084729-line-9)">(</text><text class="terminal-164084729-r4" x="317.2" y="239.6" textLength="97.6" clip-path="url(#terminal-164084729-line-9)">app.asar</text><text class="terminal-164084729-r4" x="414.8" y="239.6" textLength="12.2" clip-path="url(#terminal-164084729-line-9)">)</text><text class="terminal-164084729-r2" x="976" y="239.6" textLength="12.2" clip-path="url(#terminal-164084729-line-9)">
+</text><text class="terminal-164084729-r4" x="0" y="264" textLength="24.4" clip-path="url(#terminal-164084729-line-10)">✔&#160;</text><text class="terminal-164084729-r4" x="24.4" y="264" textLength="12.2" clip-path="url(#terminal-164084729-line-10)">[</text><text class="terminal-164084729-r4" x="36.6" y="264" textLength="73.2" clip-path="url(#terminal-164084729-line-10)">Patch&#160;</text><text class="terminal-164084729-r4" x="109.8" y="264" textLength="12.2" clip-path="url(#terminal-164084729-line-10)">6</text><text class="terminal-164084729-r4" x="122" y="264" textLength="12.2" clip-path="url(#terminal-164084729-line-10)">/</text><text class="terminal-164084729-r4" x="134.2" y="264" textLength="12.2" clip-path="url(#terminal-164084729-line-10)">8</text><text class="terminal-164084729-r4" x="146.4" y="264" textLength="12.2" clip-path="url(#terminal-164084729-line-10)">]</text><text class="terminal-164084729-r4" x="158.6" y="264" textLength="561.2" clip-path="url(#terminal-164084729-line-10)">&#160;OAuth&#160;device-id&#160;cookie&#160;injection&#160;neutralized&#160;</text><text class="terminal-164084729-r4" x="719.8" y="264" textLength="12.2" clip-path="url(#terminal-164084729-line-10)">(</text><text class="terminal-164084729-r4" x="732" y="264" textLength="97.6" clip-path="url(#terminal-164084729-line-10)">app.asar</text><text class="terminal-164084729-r4" x="829.6" y="264" textLength="12.2" clip-path="url(#terminal-164084729-line-10)">)</text><text class="terminal-164084729-r2" x="976" y="264" textLength="12.2" clip-path="url(#terminal-164084729-line-10)">
+</text><text class="terminal-164084729-r4" x="0" y="288.4" textLength="24.4" clip-path="url(#terminal-164084729-line-11)">✔&#160;</text><text class="terminal-164084729-r4" x="24.4" y="288.4" textLength="12.2" clip-path="url(#terminal-164084729-line-11)">[</text><text class="terminal-164084729-r4" x="36.6" y="288.4" textLength="73.2" clip-path="url(#terminal-164084729-line-11)">Patch&#160;</text><text class="terminal-164084729-r4" x="109.8" y="288.4" textLength="12.2" clip-path="url(#terminal-164084729-line-11)">7</text><text class="terminal-164084729-r4" x="122" y="288.4" textLength="12.2" clip-path="url(#terminal-164084729-line-11)">/</text><text class="terminal-164084729-r4" x="134.2" y="288.4" textLength="12.2" clip-path="url(#terminal-164084729-line-11)">8</text><text class="terminal-164084729-r4" x="146.4" y="288.4" textLength="12.2" clip-path="url(#terminal-164084729-line-11)">]</text><text class="terminal-164084729-r4" x="158.6" y="288.4" textLength="536.8" clip-path="url(#terminal-164084729-line-11)">&#160;Datadog&#160;RUM&#160;beforeSend&#160;hook&#160;forced&#160;to&#160;drop&#160;</text><text class="terminal-164084729-r4" x="695.4" y="288.4" textLength="36.6" clip-path="url(#terminal-164084729-line-11)">100</text><text class="terminal-164084729-r4" x="732" y="288.4" textLength="183" clip-path="url(#terminal-164084729-line-11)">%&#160;of&#160;telemetry&#160;</text><text class="terminal-164084729-r2" x="976" y="288.4" textLength="12.2" clip-path="url(#terminal-164084729-line-11)">
+</text><text class="terminal-164084729-r4" x="0" y="312.8" textLength="12.2" clip-path="url(#terminal-164084729-line-12)">(</text><text class="terminal-164084729-r4" x="12.2" y="312.8" textLength="158.6" clip-path="url(#terminal-164084729-line-12)">ion-dist.asar</text><text class="terminal-164084729-r4" x="170.8" y="312.8" textLength="12.2" clip-path="url(#terminal-164084729-line-12)">)</text><text class="terminal-164084729-r2" x="976" y="312.8" textLength="12.2" clip-path="url(#terminal-164084729-line-12)">
+</text><text class="terminal-164084729-r4" x="0" y="337.2" textLength="24.4" clip-path="url(#terminal-164084729-line-13)">✔&#160;</text><text class="terminal-164084729-r4" x="24.4" y="337.2" textLength="12.2" clip-path="url(#terminal-164084729-line-13)">[</text><text class="terminal-164084729-r4" x="36.6" y="337.2" textLength="73.2" clip-path="url(#terminal-164084729-line-13)">Patch&#160;</text><text class="terminal-164084729-r4" x="109.8" y="337.2" textLength="12.2" clip-path="url(#terminal-164084729-line-13)">8</text><text class="terminal-164084729-r4" x="122" y="337.2" textLength="12.2" clip-path="url(#terminal-164084729-line-13)">/</text><text class="terminal-164084729-r4" x="134.2" y="337.2" textLength="12.2" clip-path="url(#terminal-164084729-line-13)">8</text><text class="terminal-164084729-r4" x="146.4" y="337.2" textLength="12.2" clip-path="url(#terminal-164084729-line-13)">]</text><text class="terminal-164084729-r4" x="158.6" y="337.2" textLength="561.2" clip-path="url(#terminal-164084729-line-13)">&#160;Datadog&#160;RUM&#160;session&#160;sample&#160;rate&#160;reduced&#160;from&#160;</text><text class="terminal-164084729-r4" x="719.8" y="337.2" textLength="36.6" clip-path="url(#terminal-164084729-line-13)">100</text><text class="terminal-164084729-r4" x="756.4" y="337.2" textLength="61" clip-path="url(#terminal-164084729-line-13)">%&#160;to&#160;</text><text class="terminal-164084729-r4" x="817.4" y="337.2" textLength="12.2" clip-path="url(#terminal-164084729-line-13)">0</text><text class="terminal-164084729-r4" x="829.6" y="337.2" textLength="24.4" clip-path="url(#terminal-164084729-line-13)">%&#160;</text><text class="terminal-164084729-r2" x="976" y="337.2" textLength="12.2" clip-path="url(#terminal-164084729-line-13)">
+</text><text class="terminal-164084729-r4" x="0" y="361.6" textLength="12.2" clip-path="url(#terminal-164084729-line-14)">(</text><text class="terminal-164084729-r4" x="12.2" y="361.6" textLength="158.6" clip-path="url(#terminal-164084729-line-14)">ion-dist.asar</text><text class="terminal-164084729-r4" x="170.8" y="361.6" textLength="12.2" clip-path="url(#terminal-164084729-line-14)">)</text><text class="terminal-164084729-r2" x="976" y="361.6" textLength="12.2" clip-path="url(#terminal-164084729-line-14)">
+</text><text class="terminal-164084729-r1" x="0" y="386" textLength="353.8" clip-path="url(#terminal-164084729-line-15)">✔&#160;Local&#160;Sanitization:&#160;Purged&#160;</text><text class="terminal-164084729-r1" x="353.8" y="386" textLength="12.2" clip-path="url(#terminal-164084729-line-15)">1</text><text class="terminal-164084729-r1" x="366" y="386" textLength="536.8" clip-path="url(#terminal-164084729-line-15)">&#160;anthropic-device-id&#160;SQLite&#160;cookie;&#160;Cleared&#160;</text><text class="terminal-164084729-r1" x="902.8" y="386" textLength="12.2" clip-path="url(#terminal-164084729-line-15)">1</text><text class="terminal-164084729-r2" x="976" y="386" textLength="12.2" clip-path="url(#terminal-164084729-line-15)">
+</text><text class="terminal-164084729-r1" x="0" y="410.4" textLength="256.2" clip-path="url(#terminal-164084729-line-16)">Sentry&#160;queue&#160;envelope</text><text class="terminal-164084729-r2" x="976" y="410.4" textLength="12.2" clip-path="url(#terminal-164084729-line-16)">
+</text><text class="terminal-164084729-r4" x="0" y="434.8" textLength="134.2" clip-path="url(#terminal-164084729-line-17)">✔&#160;Enforced&#160;</text><text class="terminal-164084729-r4" x="134.2" y="434.8" textLength="12.2" clip-path="url(#terminal-164084729-line-17)">8</text><text class="terminal-164084729-r4" x="146.4" y="434.8" textLength="329.4" clip-path="url(#terminal-164084729-line-17)">&#160;surgical&#160;in-place&#160;patches&#160;</text><text class="terminal-164084729-r4" x="475.8" y="434.8" textLength="12.2" clip-path="url(#terminal-164084729-line-17)">(</text><text class="terminal-164084729-r4" x="488" y="434.8" textLength="183" clip-path="url(#terminal-164084729-line-17)">Zero-Byte&#160;Drift</text><text class="terminal-164084729-r4" x="671" y="434.8" textLength="12.2" clip-path="url(#terminal-164084729-line-17)">)</text><text class="terminal-164084729-r4" x="683.2" y="434.8" textLength="146.4" clip-path="url(#terminal-164084729-line-17)">.&#160;Integrity&#160;</text><text class="terminal-164084729-r4" x="829.6" y="434.8" textLength="36.6" clip-path="url(#terminal-164084729-line-17)">100</text><text class="terminal-164084729-r4" x="866.2" y="434.8" textLength="24.4" clip-path="url(#terminal-164084729-line-17)">%&#160;</text><text class="terminal-164084729-r2" x="976" y="434.8" textLength="12.2" clip-path="url(#terminal-164084729-line-17)">
+</text><text class="terminal-164084729-r4" x="0" y="459.2" textLength="109.8" clip-path="url(#terminal-164084729-line-18)">verified.</text><text class="terminal-164084729-r2" x="976" y="459.2" textLength="12.2" clip-path="url(#terminal-164084729-line-18)">
+</text>
+    </g>
+    </g>
+</svg>
