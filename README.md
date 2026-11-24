@@ -255,7 +255,6 @@ claude-patcher/
 │   │   ├── launch.py             # Cloaked process spawner
 │   │   └── asar_cmd.py           # Interactive surgical patch toggle
 │   └── cli.py                    # Terminal dispatcher & main interactive loop
-├── claude_patcher.py             # Root standalone launcher (backwards compatible)
 ├── pyproject.toml                # PEP 517/621 package metadata & entrypoints
 ├── install.sh                    # Universal Linux/macOS installer
 └── install.ps1                   # Universal Windows PowerShell installer
