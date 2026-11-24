@@ -3,6 +3,7 @@ set -e
 
 # ==============================================================================
 # Claude Patcher (clp) Universal Global Installer for Linux & macOS
+# Modular Enterprise Edition
 # ==============================================================================
 
 echo "=========================================================="
@@ -19,56 +20,51 @@ fi
 PY_VER=$(python3 -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
 echo "[+] Detected Python version: $PY_VER"
 
-# 2. Install dependency: rich
-echo "[+] Ensuring dependencies (rich>=13.0.0)..."
-python3 -m pip install --quiet --break-system-packages rich>=13.0.0 2>/dev/null || \
-python3 -m pip install --quiet rich>=13.0.0 2>/dev/null || \
-pip3 install --quiet rich>=13.0.0 2>/dev/null || {
-    echo "[!] Warning: pip install failed. Checking if rich is already importable..."
-    python3 -c 'import rich' 2>/dev/null || {
-        echo "[-] Error: Failed to install 'rich'. Please run: pip install rich" >&2
-        exit 1
-    }
-}
+# 2. Install package via pip (Modular Package Architecture)
+INSTALL_DIR="$(cd "$(dirname "$0")" 2>/dev/null && pwd || echo "")"
 
-# 3. Determine source file
-SCRIPT_SOURCE=""
-if [ -f "$(dirname "$0")/claude_patcher.py" ]; then
-    SCRIPT_SOURCE="$(dirname "$0")/claude_patcher.py"
-elif [ -f "./claude_patcher.py" ]; then
-    SCRIPT_SOURCE="./claude_patcher.py"
+if [ -f "$INSTALL_DIR/pyproject.toml" ] && [ -d "$INSTALL_DIR/claude_patcher" ]; then
+    echo "[+] Installing local modular package from $INSTALL_DIR..."
+    python3 -m pip install --quiet --upgrade --break-system-packages "$INSTALL_DIR" 2>/dev/null || \
+    python3 -m pip install --quiet --upgrade "$INSTALL_DIR" 2>/dev/null || \
+    pip3 install --quiet --upgrade "$INSTALL_DIR" 2>/dev/null || {
+        echo "[!] Standard pip failed, attempting sudo pip install..."
+        sudo python3 -m pip install --quiet --upgrade --break-system-packages "$INSTALL_DIR"
+    }
 else
-    TEMP_DIR=$(mktemp -d)
-    echo "[+] Downloading latest claude_patcher.py from GitHub..."
-    curl -fsSL "https://raw.githubusercontent.com/dalroot/claude-patcher/main/claude_patcher.py" -o "$TEMP_DIR/claude_patcher.py"
-    SCRIPT_SOURCE="$TEMP_DIR/claude_patcher.py"
+    echo "[+] Installing latest modular package from GitHub repository..."
+    python3 -m pip install --quiet --upgrade --break-system-packages "git+https://github.com/dalroot/claude-patcher.git" 2>/dev/null || \
+    python3 -m pip install --quiet --upgrade "git+https://github.com/dalroot/claude-patcher.git" 2>/dev/null || \
+    pip3 install --quiet --upgrade "git+https://github.com/dalroot/claude-patcher.git" 2>/dev/null || {
+        echo "[!] Standard pip failed, attempting sudo pip install..."
+        sudo python3 -m pip install --quiet --upgrade --break-system-packages "git+https://github.com/dalroot/claude-patcher.git"
+    }
 fi
 
-# 4. Global Target Paths
+# 3. Global Symlink Resolution
 TARGET_DIR="/usr/local/bin"
-TARGET_BIN="$TARGET_DIR/claude-patcher"
 TARGET_LINK="$TARGET_DIR/clp"
+TARGET_ALT="$TARGET_DIR/claude-patcher"
 
-SUDO=""
-if [ "$(id -u)" -ne 0 ]; then
-    if command -v sudo &>/dev/null; then
-        SUDO="sudo"
-    else
-        echo "[-] Error: Root privileges required to install to $TARGET_DIR. Run as root or with sudo." >&2
-        exit 1
+PIP_BIN=$(command -v clp || true)
+if [ -z "$PIP_BIN" ]; then
+    USER_BASE=$(python3 -m site --user-base 2>/dev/null || echo "$HOME/.local")
+    if [ -f "$USER_BASE/bin/clp" ]; then
+        PIP_BIN="$USER_BASE/bin/clp"
     fi
 fi
 
-echo "[+] Installing global binary to $TARGET_BIN..."
-$SUDO mkdir -p "$TARGET_DIR"
-$SUDO cp "$SCRIPT_SOURCE" "$TARGET_BIN"
-$SUDO chmod 755 "$TARGET_BIN"
-
-echo "[+] Creating global symlink $TARGET_LINK -> $TARGET_BIN..."
-$SUDO ln -sf "$TARGET_BIN" "$TARGET_LINK"
-
-# Clean up temp if used
-[ -n "$TEMP_DIR" ] && rm -rf "$TEMP_DIR"
+if [ -n "$PIP_BIN" ] && [ -x "$PIP_BIN" ]; then
+    if [ "$PIP_BIN" != "$TARGET_LINK" ]; then
+        if [ "$(id -u)" -eq 0 ]; then
+            ln -sf "$PIP_BIN" "$TARGET_LINK"
+            ln -sf "$PIP_BIN" "$TARGET_ALT"
+        elif command -v sudo &>/dev/null; then
+            sudo ln -sf "$PIP_BIN" "$TARGET_LINK" 2>/dev/null || true
+            sudo ln -sf "$PIP_BIN" "$TARGET_ALT" 2>/dev/null || true
+        fi
+    fi
+fi
 
 echo ""
 echo "=========================================================="

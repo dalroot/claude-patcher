@@ -45,8 +45,9 @@ classifiers = [
 ]
 
 [project.scripts]
-clp = "claude_patcher:main"
-claude-patcher = "claude_patcher:main"
+clp = "claude_patcher.cli:main"
+claude-patcher = "claude_patcher.cli:main"
 
-[tool.setuptools]
-py-modules = ["claude_patcher"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["claude_patcher*"]

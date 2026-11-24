@@ -223,12 +223,58 @@ clp launch
 
 ---
 
+## 🏗️ Project Architecture & Modularity
+
+`claude-patcher` is architected as an extensible, decoupled Python package adhering strictly to [clig.dev](https://clig.dev) and PEP 517/621 standards:
+
+```text
+claude-patcher/
+├── claude_patcher/               # Core Python Package
+│   ├── __init__.py               # Package public API exports & version metadata
+│   ├── __main__.py               # Entrypoint for 'python3 -m claude_patcher'
+│   ├── constants.py              # Telemetry matrices, Chromium flags & patch signatures
+│   ├── paths.py                  # DynamicPathFinder (Linux, Windows, macOS discovery)
+│   ├── system.py                 # Privileged writes, sha256 & process lifecycle
+│   ├── network.py                # Geolocation, egress IP & proxy latency testing
+│   ├── sanitizer.py              # SQLite cookie scrubber & ant-did identifier manager
+│   ├── asar.py                   # Zero-byte in-place surgical ASAR patch engine
+│   ├── engines/                  # Platform abstraction engines (OOP architecture)
+│   │   ├── base.py               # BasePlatformEngine abstract base class
+│   │   ├── linux.py              # LinuxEngine (Managed JSON policies & Bash launcher)
+│   │   └── windows.py            # WindowsEngine (HKLM/HKCU dual-hive Registry & Batch)
+│   ├── ui/                       # Rich console & visual components
+│   │   ├── banner.py             # Claude asterisk header & system telemetry
+│   │   └── menu.py               # Interactive rounded menu controls
+│   ├── commands/                 # Granular subcommand implementations
+│   │   ├── doctor.py             # Evidence-based security audit & JSON exporter
+│   │   ├── apply.py              # Multi-layer hardening orchestrator
+│   │   ├── rollback.py           # Atomic factory restoration engine
+│   │   ├── ping.py               # Egress proxy encapsulation tester
+│   │   ├── timezone.py           # Automatic & manual timezone cloaking
+│   │   ├── did.py                # Persistent install-id generator
+│   │   ├── launch.py             # Cloaked process spawner
+│   │   └── asar_cmd.py           # Interactive surgical patch toggle
+│   └── cli.py                    # Terminal dispatcher & main interactive loop
+├── claude_patcher.py             # Root standalone launcher (backwards compatible)
+├── pyproject.toml                # PEP 517/621 package metadata & entrypoints
+├── install.sh                    # Universal Linux/macOS installer
+└── install.ps1                   # Universal Windows PowerShell installer
+```
+
+---
+
 ## 📜 Changelog
 
 ### v1.0.0-beta (2026-11-24)
+- **Modular Package Architecture:** Refactored monolithic script into a clean, modular Python package (`claude_patcher`) with decoupled domains (`engines`, `ui`, `commands`, `asar`, `sanitizer`, `network`), while maintaining 100% backwards compatibility for direct execution (`./claude_patcher.py`).
 - **Full 8-Layer In-Place ASAR Hardening:** Implemented zero-byte drift binary patching for `app.asar` and `ion-dist.asar` covering GrowthBook, EventLogging, Sentry DSN init, Sentry egress verdict gate, Electron in-memory firewall, OAuth device-id read, and Datadog RUM drop-all/zero-sampling.
 - **Refined Electron WebRequest Firewall:** Tuned egress filter to target `datadoghq.com`, `sentry.io`, and `segment.io` without interfering with local internal React bundle assets (`vendor-datadog-*.js`).
 - **Automated Process Termination Lifecycle (`ensure_claude_closed`):** Automatically scans for active Claude instances, issues graceful `SIGTERM` signals, releases file and SQLite locks, and cleans memory before patch application or rollback.
+- **Multi-User Artifact Sanitizer (`sanitize_local_telemetry_artifacts`):** Automatically locates and purges `anthropic-device-id` from SQLite cookie stores, clears residual Sentry envelope queues, and strips stale session latches (`oauth:staleSessionLatch`).
+- **Command-Specific Visual Previews:** Embedded dedicated, pixel-perfect terminal cards under each CLI command.
+- **Doctor Diagnostic Suite Redesign:** Multi-column evidence-backed audit tables reporting MDM status, 11 Chromium switches, egress sinkholes, and ASAR patch verification with machine-readable `--json` export.
+- **Native Stock Backups & Atomic Rollback:** Backs up pristine factory `.stock.bak` files on first run, providing 100% reversible, non-destructive restoration via `clp rollback`.
+- **Comprehensive Bilingual Documentation:** Added comprehensive Persian documentation (`README_FA.md`) and technical reverse-engineering reports (`docs/EVIDENCE_FINDINGS_FA.md`).
 - **Multi-User Artifact Sanitizer (`sanitize_local_telemetry_artifacts`):** Automatically locates and purges `anthropic-device-id` from SQLite cookie stores, clears residual Sentry envelope queues, and strips stale session latches (`oauth:staleSessionLatch`).
 - **Command-Specific Visual Previews:** Embedded dedicated, pixel-perfect terminal cards under each CLI command.
 - **Doctor Diagnostic Suite Redesign:** Multi-column evidence-backed audit tables reporting MDM status, 11 Chromium switches, egress sinkholes, and ASAR patch verification with machine-readable `--json` export.

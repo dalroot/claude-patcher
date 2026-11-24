@@ -1,5 +1,6 @@
-# ==============================================================================
+﻿# ==============================================================================
 # Claude Patcher (clp) Universal Global Installer for Windows
+# Modular Enterprise Edition
 # ==============================================================================
 $ErrorActionPreference = "Stop"
 
@@ -16,9 +17,14 @@ if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
 $pyVersion = python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")'
 Write-Host "[+] Detected Python version: $pyVersion" -ForegroundColor Green
 
-# 2. Install dependency: rich
-Write-Host "[+] Ensuring dependencies (rich>=13.0.0)..." -ForegroundColor Green
-python -m pip install --quiet rich>=13.0.0
+# 2. Install package via pip (Modular Package Architecture)
+if (Test-Path (Join-Path $PSScriptRoot "pyproject.toml")) {
+    Write-Host "[+] Installing local modular package from $PSScriptRoot..." -ForegroundColor Green
+    python -m pip install --quiet --upgrade $PSScriptRoot
+} else {
+    Write-Host "[+] Installing latest modular package from GitHub repository..." -ForegroundColor Green
+    python -m pip install --quiet --upgrade "git+https://github.com/dalroot/claude-patcher.git"
+}
 
 # 3. Create global installation directory
 $installDir = "$env:LOCALAPPDATA\Programs\claude-patcher"
@@ -26,24 +32,12 @@ if (-not (Test-Path $installDir)) {
     New-Item -ItemType Directory -Path $installDir -Force | Out-Null
 }
 
-# 4. Source file resolution (local file or download from GitHub)
-$targetScript = "$installDir\claude_patcher.py"
-$localScript = Join-Path $PSScriptRoot "claude_patcher.py"
-
-if (Test-Path $localScript) {
-    Copy-Item -Path $localScript -Destination $targetScript -Force
-} else {
-    Write-Host "[+] Downloading latest claude_patcher.py from GitHub..." -ForegroundColor Green
-    $url = "https://raw.githubusercontent.com/dalroot/claude-patcher/main/claude_patcher.py"
-    Invoke-WebRequest -Uri $url -OutFile $targetScript -UseBasicParsing
-}
-
-# 5. Generate global batch wrappers for CMD & PowerShell
-$batchContent = "@echo off`r`npython `"$targetScript`" %*"
+# 4. Generate global batch wrappers for CMD & PowerShell
+$batchContent = "@echo off`r`npython -m claude_patcher %*"
 Set-Content -Path "$installDir\clp.cmd" -Value $batchContent -Force
 Set-Content -Path "$installDir\claude-patcher.cmd" -Value $batchContent -Force
 
-# 6. Ensure install directory is in User PATH
+# 5. Ensure install directory is in User PATH
 $userPath = [Environment]::GetEnvironmentVariable("PATH", [EnvironmentVariableTarget]::User)
 if ($userPath -split ';' -notcontains $installDir) {
     Write-Host "[+] Adding $installDir to User PATH..." -ForegroundColor Green
@@ -60,12 +54,12 @@ if (Test-Path $winApps) {
 }
 
 Write-Host ""
-Write-Host "==========================================================" -ForegroundColor Cyan
-Write-Host " [OK] Claude Patcher (clp) installed globally!" -ForegroundColor Green
-Write-Host "==========================================================" -ForegroundColor Cyan
-Write-Host " You can now run 'clp' from ANY terminal window:" -ForegroundColor Yellow
-Write-Host "   - clp          : Open Interactive Security Center" -ForegroundColor Yellow
-Write-Host "   - clp doctor   : Run Evidence-Based Security Audit" -ForegroundColor Yellow
-Write-Host "   - clp apply    : Deploy Enterprise MDM & Anti-Leak Shield" -ForegroundColor Yellow
-Write-Host "   - clp rollback : 100% Atomic Rollback to Factory State" -ForegroundColor Yellow
-Write-Host "==========================================================" -ForegroundColor Cyan
+Write-Host "==========================================================" -ForegroundColor Green
+Write-Host " [✓] Claude Patcher (clp) installed globally on Windows!" -ForegroundColor Green
+Write-Host "==========================================================" -ForegroundColor Green
+Write-Host " You can now run 'clp' from ANY CMD or PowerShell terminal:" -ForegroundColor Yellow
+Write-Host "   - clp          : Open Interactive Security Center"
+Write-Host "   - clp doctor   : Run Evidence-Based Security Audit"
+Write-Host "   - clp apply    : Deploy Enterprise MDM & Anti-Leak Shield"
+Write-Host "   - clp rollback : 100% Atomic Rollback to Factory State"
+Write-Host "==========================================================" -ForegroundColor Green
