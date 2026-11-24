@@ -1,0 +1,40 @@
+RESTRICTED SOURCE-AVAILABLE PROPRIETARY LICENSE (RSAL)
+
+Version 1.0, November 2026
+Copyright (c) 2026 dalroot. All Rights Reserved.
+Project Repository: https://github.com/dalroot/claude-patcher
+
+TERMS AND CONDITIONS FOR ACCESS, USE, AND CONTRIBUTION
+
+1. DEFINITIONS
+"Software" refers to the source code, scripts, binaries, configuration templates, documentation, visual cards, and assets associated with the claude-patcher project.
+"Copyright Holder" refers to dalroot and designated official project maintainers.
+"Derivative Work" means any modification, adaptation, translation, enhancement, fork, or combination of the Software with any other software.
+
+2. LICENSE GRANT & PERMITTED USE
+Subject to the strict terms and restrictions set forth herein, the Copyright Holder grants you a non-exclusive, non-transferable, revocable license to:
+  (a) Inspect, view, and audit the source code solely for personal security verification and educational purposes.
+  (b) Download, install, and execute the Software strictly in its original, unmodified form on your personal computing devices for privacy protection and endpoint telemetry defense.
+
+3. STRICT PROHIBITION OF MODIFICATION, FORKING & DERIVATIVES
+  (a) NO MODIFICATIONS: You shall NOT modify, alter, patch, rewrite, adapt, translate, decompile, reverse-engineer, or disassemble any part of the Software, nor create any Derivative Works, for ANY purpose (whether commercial or non-commercial), without prior express written permission signed by the Copyright Holder.
+  (b) NO INDEPENDENT FORKS: Maintaining independent or publicly distributed forks, branches, or downstream repackagings outside the official repository is strictly prohibited.
+
+4. CONTRIBUTIONS VIA PULL REQUEST ONLY
+  (a) The sole permitted avenue for developing, enhancing, or bug-fixing the Software is by submitting a Pull Request (PR) directly to the upstream official repository:
+      https://github.com/dalroot/claude-patcher
+  (b) By submitting a Pull Request, issue patch, or suggestion, you grant the Copyright Holder a perpetual, irrevocable, worldwide, royalty-free, fully paid-up, exclusive, and sublicensable license to incorporate, modify, distribute, and license your contribution under this License or any subsequent license chosen by the Copyright Holder.
+  (c) Submission of a contribution does not grant the contributor any ownership, copyright title, or right to independently fork, redistribute, or monetize the Software or any portion thereof.
+
+5. STRICT PROHIBITION OF COPYING, REDISTRIBUTION & COMMERCIAL EXPLOITATION
+  (a) NO REDISTRIBUTION: You shall NOT copy, mirror, re-host, upload, redistribute, publish, sublicense, rent, lease, or syndicate the Software or its assets on any website, mirror, registry, or package manager without explicit prior written authorization.
+  (b) NO COMMERCIAL USE: Any commercial use, including but not limited to selling, monetizing, bundling with commercial products, offering as a paid service, SaaS, or enterprise consultancy offering, is strictly prohibited without a separate executed Commercial Licensing Agreement from the Copyright Holder.
+
+6. PROPRIETARY RIGHTS & TRADEMARKS
+All intellectual property rights, trademarks, visual assets, terminal artwork, and architecture remain the exclusive property of dalroot. No implied rights or patent grants are conferred.
+
+7. TERMINATION
+Any violation or non-compliance with these terms automatically terminates all rights granted under this License immediately. Upon termination, you must immediately cease all use and permanently destroy all copies of the Software in your possession.
+
+8. DISCLAIMER OF WARRANTY & LIMITATION OF LIABILITY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE.

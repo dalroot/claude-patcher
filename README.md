@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+[![License: RSAL-1.0](https://img.shields.io/badge/License-Source--Available%20RSAL--1.0-orange.svg?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0--beta-orange.svg?style=flat-square)](https://github.com/dalroot/claude-patcher)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows-blueviolet.svg?style=flat-square)](https://github.com/dalroot/claude-patcher)
 [![Status](https://img.shields.io/badge/status-Beta%20Preview-yellow.svg?style=flat-square)](https://github.com/dalroot/claude-patcher)
@@ -259,6 +259,19 @@ clp rollback
 
 ---
 
+## 📄 License & Terms of Use
+
+This project is licensed under the **Restricted Source-Available Proprietary License (RSAL-1.0)**. See the full [LICENSE](LICENSE) file for exact legal terms.
+
+### Summary of Rights & Restrictions:
+- 👁️ **Source-Available:** You are free to inspect and audit the complete source code for personal privacy, security verification, and educational purposes.
+- 🛡️ **Personal Use Only:** You may run the software unmodified on your personal devices.
+- 🚫 **No Copying or Redistribution:** You may NOT copy, mirror, re-host, redistribute, sublicense, or sell this software or its visual assets for any commercial or non-commercial purpose without prior express written permission from the copyright holder (`dalroot`).
+- 🚫 **No Unauthorized Modifications:** You may NOT alter, decompile, create derivative works of, or distribute modified versions of this software.
+- 🤝 **Contributions via Pull Request Only:** Independent forks for distribution are strictly forbidden. All development, enhancements, and bug fixes must be contributed directly via a **Pull Request (PR)** to this upstream repository ([dalroot/claude-patcher](https://github.com/dalroot/claude-patcher)).
+
+---
+
 ## ⚖️ Disclaimer
 
-This project is an independent open-source utility and is **not affiliated with, endorsed by, or sponsored by Anthropic PBC**. All product names and trademarks are property of their respective owners.
+This project is an independent source-available privacy shield and is **not affiliated with, endorsed by, or sponsored by Anthropic PBC**. All product names and trademarks are property of their respective owners.

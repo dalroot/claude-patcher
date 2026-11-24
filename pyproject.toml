@@ -10,7 +10,7 @@ readme = "README.md"
 authors = [
     { name = "Claude Patcher Contributors" }
 ]
-license = { text = "MIT" }
+license = { text = "Restricted Source-Available Proprietary License (RSAL-1.0)" }
 requires-python = ">=3.9"
 dependencies = [
     "rich>=13.0.0"
@@ -19,6 +19,7 @@ keywords = [
     "claude",
     "claude-desktop",
     "anthropic",
+    "anti-ban",
     "privacy",
     "telemetry",
     "hardener",
@@ -31,7 +32,7 @@ classifiers = [
     "Environment :: Console",
     "Intended Audience :: Developers",
     "Intended Audience :: System Administrators",
-    "License :: OSI Approved :: MIT License",
+    "License :: Other/Proprietary License",
     "Operating System :: POSIX :: Linux",
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",

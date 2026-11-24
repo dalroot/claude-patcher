@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+[![License: RSAL-1.0](https://img.shields.io/badge/License-Source--Available%20RSAL--1.0-orange.svg?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0--beta-orange.svg?style=flat-square)](https://github.com/dalroot/claude-patcher)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows-blueviolet.svg?style=flat-square)](https://github.com/dalroot/claude-patcher)
 [![Status](https://img.shields.io/badge/status-Beta%20Preview-yellow.svg?style=flat-square)](https://github.com/dalroot/claude-patcher)
@@ -253,8 +253,21 @@ clp rollback
 
 ---
 
+## 📄 لایسنس و شرایط استفاده (License & Terms of Use)
+
+این پروژه تحت لایسنس اختصاصی **سورس در دسترس با حقوق محفوظ (Restricted Source-Available Proprietary License - RSAL-1.0)** منتشر شده است. متن کامل حقوقی را در فایل [LICENSE](LICENSE) مطالعه فرمایید.
+
+### خلاصه شرایط و حقوق قانونی:
+* 👁️ **سورس در دسترس (Source-Available):** سورس‌کد پروژه جهت شفافیت کامل، ممیزی امنیتی و اهداف آموزشی به صورت عمومی قابل مشاهده و بررسی است.
+* 🛡️ **استفاده شخصی و دفاعی:** اجرای برنامه به صورت دست‌نخورده بر روی سیستم شخصی کاربران جهت حفاظت از حریم خصوصی کاملاً مجاز است.
+* 🚫 **ممنوعیت کامل کپی، بازنشر و اهداف تجاری:** کپی‌برداری، میرور کردن، بازنشر، فروش، بازتوزیع، اجاره یا انتشار مجدد سورس، باینری یا دارایی‌های بصری این پروژه برای **هرگونه مقاصد تجاری یا غیرتجاری** بدون کسب اجازه کتبی صریح از صاحب اثر (`dalroot`) اکیداً ممنوع و پیگردپذیر است.
+* 🚫 **ممنوعیت هرگونه تغییر و فورک موازی:** هیچ شخصی حق ویرایش، ایجاد انشعاب‌های عمومی (Fork جهت توزیع)، مهندسی معکوس جهت سرقت یا ساخت پروژه‌های مشتق‌شده بدون مجوز کتبی را ندارد.
+* 🤝 **توسعه صرفاً از طریق پول ریکوئست (PR):** توسعه و مشارکت در پروژه تنها و تنها از طریق ارسال **Pull Request (PR)** به همین ریپازیتوری رسمی مجاز است و مشارکت‌کننده حق انتشار موازی آن را ندارد.
+
+---
+
 ## ⚖️ سلب مسئولیت حقوقی (Disclaimer)
 
-این پروژه یک نرم‌افزار مستقل، متن‌باز و دفاعی برای حفظ حریم خصوصی است و **هیچ‌گونه وابستگی رسمی، تاییدیه یا ارتباط تجاری با شرکت Anthropic PBC ندارد**. تمامی نام‌ها و نشان‌های تجاری به مالکان حقوقی آن‌ها تعلق دارد.
+این پروژه یک نرم‌افزار مستقل، سورس در دسترس (Source-Available) و دفاعی برای حفظ حریم خصوصی است و **هیچ‌گونه وابستگی رسمی، تاییدیه یا ارتباط تجاری با شرکت Anthropic PBC ندارد**. تمامی نام‌ها و نشان‌های تجاری به مالکان حقوقی آن‌ها تعلق دارد.
 
 </div>
