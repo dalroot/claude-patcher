@@ -38,6 +38,8 @@ def cmd_rollback():
             t.add_row("[bold green]✔ RESTORED[/bold green]", "System Hosts File", f"Reverted bit-for-bit to pristine backup ({calculate_sha256(hp)[:16]}...)")
         except Exception as e:
             t.add_row("[bold red]✘ ERROR[/bold red]", "System Hosts File", str(e))
+    else:
+        t.add_row("[bold yellow]⚠ SKIPPED[/bold yellow]", "System Hosts File", "Pristine backup not found — hosts file left unchanged")
 
     # 2. Rollback MDM
     ENGINE.rollback_mdm()

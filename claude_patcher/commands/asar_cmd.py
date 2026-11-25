@@ -3,6 +3,7 @@ Interactive ASAR Patch Toggle Command.
 """
 from ..ui import console
 from ..asar import check_asar_patch_status, apply_asar_patch, rollback_asar_patch
+from ..system import ensure_claude_closed
 
 
 def cmd_toggle_asar():
@@ -21,6 +22,7 @@ def cmd_toggle_asar():
         except (KeyboardInterrupt, EOFError):
             return
         if c == "y":
+            ensure_claude_closed()
             ok, msg = rollback_asar_patch()
             if ok:
                 console.print(f"[bold green]✔ {msg}[/bold green]")
@@ -33,6 +35,7 @@ def cmd_toggle_asar():
         except (KeyboardInterrupt, EOFError):
             return
         if c == "y":
+            ensure_claude_closed()
             ok, msg = apply_asar_patch()
             if ok:
                 console.print(f"[bold green]✔ {msg}[/bold green]")

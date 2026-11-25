@@ -1,6 +1,7 @@
 """
 Command-Line Interface & Interactive Loop Dispatcher.
 """
+import inspect
 import sys
 import time
 
@@ -17,6 +18,8 @@ from .commands import (
     cmd_toggle_asar,
 )
 from .asar import apply_asar_patch, rollback_asar_patch
+from .constants import VERSION
+from .system import ensure_claude_closed
 
 
 def interactive_loop():
@@ -67,14 +70,30 @@ def main():
     if len(sys.argv) > 1:
         cmd = sys.argv[1].lower()
         if cmd == "doctor":
-            cmd_doctor(json_output=("--json" in sys.argv))
+            cmd_doctor(
+                json_output=("--json" in sys.argv),
+                check_network=("--offline" not in sys.argv),
+            )
         elif cmd == "apply":
             tz = None
-            if "--tz" in sys.argv:
-                idx = sys.argv.index("--tz")
-                if idx + 1 < len(sys.argv):
+            for idx, arg in enumerate(sys.argv[2:], start=2):
+                if arg == "--tz":
+                    if idx + 1 >= len(sys.argv):
+                        console.print("[bold red]✘ --tz requires a timezone argument[/bold red]")
+                        sys.exit(1)
                     tz = sys.argv[idx + 1]
-            cmd_apply(tz=tz, reset_did=("--reset-did" in sys.argv))
+                    break
+                if arg.startswith("--tz="):
+                    tz = arg.split("=", 1)[1]
+                    if not tz:
+                        console.print("[bold red]✘ --tz requires a non-empty timezone argument[/bold red]")
+                        sys.exit(1)
+                    break
+            cmd_apply(
+                tz=tz,
+                reset_did=("--reset-did" in sys.argv),
+                strict_sift=("--strict-sift" in sys.argv),
+            )
         elif cmd == "rollback":
             cmd_rollback()
         elif cmd == "ping":
@@ -89,22 +108,33 @@ def main():
         elif cmd == "launch":
             cmd_launch_claude()
         elif cmd in ["patch-asar", "patch_asar"]:
-            ok, msg = apply_asar_patch()
+            ensure_claude_closed()
+            strict_sift = "--strict-sift" in sys.argv
+            try:
+                if "strict_sift" in inspect.signature(apply_asar_patch).parameters:
+                    ok, msg = apply_asar_patch(strict_sift=strict_sift)
+                else:
+                    ok, msg = apply_asar_patch()
+            except Exception as e:
+                ok, msg = False, str(e)
             if ok:
                 console.print(f"[bold green]✔ {msg}[/bold green]")
             else:
                 console.print(f"[bold red]✘ {msg}[/bold red]")
                 sys.exit(1)
         elif cmd in ["rollback-asar", "unpatch-asar"]:
+            ensure_claude_closed()
             ok, msg = rollback_asar_patch()
             if ok:
                 console.print(f"[bold green]✔ {msg}[/bold green]")
             else:
                 console.print(f"[bold red]✘ {msg}[/bold red]")
                 sys.exit(1)
+        elif cmd in ["asar", "toggle-asar"]:
+            cmd_toggle_asar()
         elif cmd in ["-h", "--help", "help"]:
-            print("Claude Patcher CLI v1.0-beta (Linux & Windows)")
-            print("Usage: clp [doctor [--json] | apply [--tz <TZ>] [--reset-did] | rollback | ping | tz | reset-did | launch | patch-asar | rollback-asar]")
+            print(f"Claude Patcher CLI v{VERSION} (Linux, Windows & macOS)")
+            print("Usage: clp [doctor [--json] [--offline] | apply [--tz <TZ|auto>] [--reset-did] [--strict-sift] | rollback | ping | tz [auto] | reset-did | launch | patch-asar [--strict-sift] | rollback-asar | asar]")
         else:
             print(f"Unknown command: {cmd}. Run 'clp --help' for usage.")
             sys.exit(1)

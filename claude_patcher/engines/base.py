@@ -36,3 +36,12 @@ class BasePlatformEngine(ABC):
     def check_launcher_status(self):
         """Inspects the launcher script and returns a dictionary of active flag states."""
         pass
+
+    def get_launcher_diagnostics(self):
+        """Returns structured diagnostics on wrapper deployment and entrypoint linkage."""
+        return {
+            "wrapper_exists": False,
+            "wrapper_path": None,
+            "linked": False,
+            "unlinked_warning": None,
+        }

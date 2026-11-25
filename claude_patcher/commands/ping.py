@@ -22,6 +22,8 @@ def cmd_ping():
         t.add_row("City & Region:", f"{info.get('city', '')}, {info.get('regionName', '')}")
         t.add_row("ISP / Organization:", info.get("isp", "Unknown"))
         t.add_row("Recommended Timezone:", info.get("timezone", "UTC"))
+        if info.get("provider"):
+            t.add_row("Geolocation Source:", f"{info['provider']} (HTTPS TLS)")
         console.print(t)
     else:
         console.print("[bold red]✘ Could not reach IP geolocation endpoint. Check network connectivity or proxy routing.[/bold red]")

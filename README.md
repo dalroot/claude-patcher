@@ -1,5 +1,11 @@
 # Claude Patcher (`clp`)
 
+> [!CAUTION]
+> **EXPERIMENTAL VERSION — USE AT YOUR OWN RISK**
+>
+> **This release is experimental and under active testing.**
+> **NEVER test or use this tool on an important account or any account with an active paid subscription.** Runtime patching of Claude Desktop may trigger account flags, suspensions, or unexpected behavior. Only test with disposable/non-critical accounts.
+
 <div align="center">
 
 [![License: RSAL-1.0](https://img.shields.io/badge/License-Source--Available%20RSAL--1.0-orange.svg?style=flat-square)](LICENSE)

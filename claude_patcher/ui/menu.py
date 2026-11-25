@@ -20,7 +20,7 @@ def print_boxed_menu():
     menu.add_row("[2]", "Network & VPN Ping", "Test proxy encapsulation, latency, and geographic location")
     menu.add_row("[3]", "Set Timezone (Auto)", "Detect proxy country and cloak launcher timezone dynamically")
     menu.add_row("[4]", "Set Timezone (Manual)", "Choose a custom destination timezone from supported regions")
-    menu.add_row("[5]", "Apply All Protections", "Deploy all shields: MDM, 11-flag Chromium, Hosts Sinkholes & ASAR Patch")
+    menu.add_row("[5]", "Apply All Protections", "Deploy all shields: MDM, Chromium Flags, Hosts Sinkholes & ASAR Patch")
     menu.add_row("[6]", "Rollback to Stock", "Restore 100% factory state: remove policies, revert hosts & restore stock ASAR")
     menu.add_row("[7]", "Reset Install ID", "Generate fresh persistent install identifier (UUID v4)")
     menu.add_row("[8]", "Launch Claude", "Start Claude Desktop under active Privacy & Anti-Leak Shield")
